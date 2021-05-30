@@ -158,6 +158,11 @@ public class DrawingFrame extends JFrame {
 			repaint();
 		}
 
+		public DrawingSet clear() {
+			drawings.add(new Drawing(DrawingType.CLEAR, new int[]{}));
+			return this;
+		}
+
 		public DrawingSet drawPoint(int x, int y) {
 			return drawPoint(0, x, y);
 		}
